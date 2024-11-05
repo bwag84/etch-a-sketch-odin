@@ -1,0 +1,23 @@
+/* set background color to lkight blue */
+body {
+  background-color: lightblue;
+}
+
+#container {
+    display: grid;
+    grid-template-columns: repeat(16, 1fr);
+    grid-template-rows: repeat(16, 1fr);
+    gap: 2px;
+}
+.box {
+    width: 100%;
+    padding-top: 100%; /* Maintain aspect ratio */
+    background-color: #ccc;
+    position: relative;
+}
+.box:hover {
+    filter: brightness(90%);
+}
+.btn {
+    margin-top: 20px;
+}
