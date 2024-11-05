@@ -1,23 +1,26 @@
 /* set background color to lkight blue */
 body {
   background-color: lightblue;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 #container {
-    display: grid;
-    grid-template-columns: repeat(16, 1fr);
-    grid-template-rows: repeat(16, 1fr);
+    display: flex;
+    flex-wrap: wrap;
     gap: 2px;
+    max-width: 960px;
+    width: 100%;
 }
 .box {
-    width: 100%;
-    padding-top: 100%; /* Maintain aspect ratio */
+    flex: 1 0 calc(100% / 16 - 2px); /* Adjust width based on the number of boxes per row */
+    padding-top: calc(100% / 16 - 2px); /* Maintain aspect ratio */
     background-color: #ccc;
     position: relative;
 }
-.box:hover {
-    filter: brightness(90%);
-}
 .btn {
     margin-top: 20px;
+    margin-bottom: 20px;
+    align-self: center;
 }
